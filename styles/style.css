@@ -1,0 +1,583 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(30deg, #41a28e, #666);
+    border-radius: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav_list {
+    display: flex;
+    gap: 40px;
+}
+
+.header__nav_link {
+    font-family: 'Playfair';
+    font-weight: 400;
+    font-size: 12px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.header__nav {
+    padding: 25px 0;
+    background: #fff;
+}
+
+.header__form {
+    display: flex;
+    gap: 4px;
+}
+
+.header__form_input {
+    border: 1px solid #41a28e;
+    width: 180px;
+    height: 28px;
+    outline: none;
+    padding: 0 12px;
+}
+
+.header__form_input::placeholder {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    color: #4b4848;
+}
+
+
+.header__form_btn {
+    background: #41a28e;
+    width: 28px;
+    height: 28px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__content {
+    background: url(../images/content.jpg) no-repeat center /cover;
+    background-attachment: fixed;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.header__content_title {
+    font-family: 'Playfair';
+    font-weight: 400;
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 17px 60px;
+}
+
+.header__content_text {
+    font-family: 'Playfair';
+    font-weight: 400;
+    font-size: 22px;
+    color: #fff;
+}
+
+.header__content_link {
+    width: 130px;
+    height: 60px;
+    background: #fff;
+    font-family: 'Playfair';
+    font-weight: 400;
+    font-size: 12px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:  300ms;
+}
+
+.header__content_link:hover {
+    background: #41a28e;
+    color: white;
+}
+
+.header__nav_drop {
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    width: 160px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 16px;
+    z-index: -1;
+}
+
+.header__nav_li:hover  .header__nav_drop {
+    z-index: 1;
+}
+
+
+.header__nav_drop_link:hover {
+    background: #41a28e;
+    color: white;
+}
+
+.header__nav_li {
+    position: relative;
+}
+
+.header__nav_drop_link {
+    font-family: 'Playfair';
+    font-weight: 400;
+    font-size: 12px;
+    color: #000;
+    padding: 12px 30px;
+    display: block;
+}
+
+
+.header__nav_drop_link.dash {
+    border-top: 1px solid  #e5e5e5;
+    border-bottom: 1px solid  #e5e5e5;
+}
+
+
+.header__nav_link_img {
+    transform: rotate(180deg);
+}
+
+.header__nav_li:hover   .header__nav_link_img {
+    transform: rotate(0);
+}
+
+
+.commerce {
+    padding-top: 48px;
+    padding-bottom: 72px;
+}
+
+.commerce__box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 52px;
+}
+
+.commerce__box_item {
+    max-width: 255px;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.commerce__box_item_img {
+    width: 100%;
+    display: block;
+}
+
+.commerce__box_item_title {
+    font-family: 'Playfair';
+    font-weight: 400;
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+    background: rgba(75, 72, 72, 0.7);
+    position: absolute;
+    left: 0;
+    bottom: -20%;
+    width: 100%;
+    transition: 300ms;
+}
+
+
+.commerce__box_item:hover   .commerce__box_item_title {
+    bottom: 0;
+}
+
+
+.commerce__info,
+.products__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.commerce__info_title,
+.products__info_title {
+    font-family: 'Playfair';
+    font-weight: 400;
+    font-size: 50px;
+    text-align: center;
+    color: #000;
+}
+
+.commerce__info_text,
+.products__info_text{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #666;
+    max-width: 496px;
+    width: 100%;
+}
+
+.project {
+    background: url(../images/project.jpg) no-repeat center /cover;
+    background-attachment: fixed;
+    padding-top: 120px;
+    padding-bottom: 112px;
+}
+
+.project__box_text {
+    font-family: 'Playfair';
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+}
+
+.project__box_title {
+    font-family: 'Playfair';
+    font-weight: 400;
+    font-size: 50px;
+    color: #fff;
+    margin-top: 3px;
+    margin-bottom: 22px;
+}
+
+.project__box_link {
+    width: 190px;
+    height: 53px;
+    background: #fff;
+    font-family: 'Playfair';
+    font-weight: 400;
+    font-size: 12px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 300ms;
+}
+
+.project__box_link:hover {
+    background: #41a28e;
+    color: white;
+}
+
+
+.products {
+    padding: 50px 0;
+}
+
+.products__item {
+    max-width: 255px;
+    width: 100%;
+}
+
+.products__item_top_img {
+    width: 100%;
+    display: block;
+}
+
+.products__item_top {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.products__item_top:hover    .products__item_top_box {
+    bottom: 0;
+}
+
+.products__item_top_box {
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 20px;
+    position: absolute;
+    left: 0;
+    bottom: -16%;
+    width: 100%;
+    transition: 300ms;
+}
+
+.products__item_top_add {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-family: 'Playfair';
+    font-weight: 400;
+    font-size: 12px;
+    color: #fff;
+}
+
+.products__item_top_right {
+    display: flex;
+    gap: 23px;
+}
+
+.products__item_bottom {
+    margin-top: 42px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.products__item_bottom_name {
+    font-family: 'Playfair';
+    font-weight: 400;
+    font-size: 22px;
+    color: #000;
+}
+
+.products__item_bottom_price {
+    font-family: 'Playfair';
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+    font-variant-numeric: lining-nums proportional-nums;
+}
+
+.products__box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.products__item_bottom_discount {
+    font-family: 'Playfair';
+    font-weight: 400;
+    font-size: 18px;
+    color: #666;
+    text-decoration: line-through;
+    margin-right: 15px;
+}
+
+.out::before {
+    content: 'OUT OF STOCK';
+}
+
+.sale::before {
+    content: 'SALE';
+}
+
+.products__item {
+    position: relative;
+}
+
+.out::before,
+.sale::before {
+    background: #4b484b;
+    padding: 10px 18px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.footer__top {
+    background: #000;
+    padding: 36px 0;
+}
+.footer__top-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__top-item {
+    max-width: 255px;
+    width: 100%;
+}
+
+.footer__top-item-title {
+    font-family: 'Playfair';
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.footer__top-item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer__top-item-link {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer__top-item-social {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__top-form {
+    display: flex;
+}
+
+.footer__top-form-input {
+    max-width: 200px;
+    width: 100%;
+    height: 44px;
+    border: none;
+    outline: none;
+    padding:  0 10px;
+}
+
+.footer__top-form-input::placeholder {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    color: #909090;
+}
+
+.footer__top-form-btn {
+    width: 55px;
+    height: 44px;
+    background: #41a28e;
+    border: none;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+}
+
+.footer__top-item-text {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    margin: 20px 0;
+}
+
+.footer__top-item-cards {
+    display: flex;
+    gap: 25px;
+}
+
+.footer__bottom {
+    background: #121212;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.footer__bottom-title {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    color: #666;
+}
+.footer__bottom-title-span {
+    text-shadow: 0 0 4px  #e52d27;
+}
+
+
+@media (max-width:1140px) {
+    .commerce__box,
+    .products__box {
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+}
+
+@media (max-width:1000px) {
+    .footer__top-box {
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+    
+    .header__box {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+@media (max-width:600px) {
+    .header__content {
+        height: 350px;
+    }
+    .header__content_title {
+        font-size: 25px;
+        padding: 15px 25px;
+    }
+    
+    .footer__top-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer__top-item-list {
+        align-items: center;
+    }
+    
+    .header__nav_list {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+    .project__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .commerce__info_title,
+    .project__box_title,
+    .products__info_title {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .header__nav_drop {
+        width: 120px;
+    }
+    
+}
