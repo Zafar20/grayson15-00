@@ -27,6 +27,11 @@ ul {
     padding: 0 15px;
 }
 
+
+body {
+    background: rgb(47, 47, 47);
+}
+
 .header__box {
     display: flex;
     justify-content: space-between;
